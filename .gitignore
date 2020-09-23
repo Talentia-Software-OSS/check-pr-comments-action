@@ -1,0 +1,8 @@
+﻿.idea
+.venv
+__pycache__
+*.coverage
+*coverage*.xml
+*-report
+*-report.*
+*.bat

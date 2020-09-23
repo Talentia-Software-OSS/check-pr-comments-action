@@ -1,0 +1,20 @@
+name: Test this custom GitHub Action
+on: [ pull_request ]
+
+jobs:
+  test_custom_action:
+    name: A job to test custom action
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print debug info
+        uses: hmarr/debug-action@v1.0.0
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run custom action step
+        uses: ./ # Uses an action in the root directory
+        id: custom
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required to to act on pull request through GitHub API
+        with:
+          comments-must-contain: '# Description'
+          comments-must-not-contain: '- [ ]'

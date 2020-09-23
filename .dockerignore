@@ -1,0 +1,7 @@
+# First exclude everything
+**/*
+# Now list what we need
+!action/*.py
+!action.yml
+!README.md
+!requirements.lock

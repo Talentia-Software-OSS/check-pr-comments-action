@@ -1,0 +1,19 @@
+name: "CheckPRComments"
+description: "Check that PR comment contains (or not) a given text."
+branding:
+  icon: message-square
+  color: purple
+
+inputs:
+  comments-must-contain:
+    description: "This text must appear in a PR description"
+    required: false
+    default: ""
+  comments-must-not-contain:
+    description: "This text must not appear in a PR description"
+    required: false
+    default: ""
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
