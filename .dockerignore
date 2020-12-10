@@ -1,7 +1,7 @@
 # First exclude everything
 **/*
 # Now list what we need
-!action/*.py
+!check_pr_comment/*.py
 !action.yml
 !README.md
 !requirements.lock
